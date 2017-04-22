@@ -34,6 +34,9 @@ public class KeyboardController : MonoBehaviour
 		if (Input.GetKeyUp (KeyCode.A)) {
 			controllables [0].Invoke ();
 		}
+		if (Input.GetKeyUp (KeyCode.B)) {
+			controllables [1].Invoke ();
+		}
 	}
 }
 
