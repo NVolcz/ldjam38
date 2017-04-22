@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class Router : MonoBehaviour, IResourceEventHandler {
+public class Router : MonoBehaviour, ISteamHandler {
 
 	public List<GameObject> steamTarget = new List<GameObject> (1);
 	private GameObject current;
@@ -20,7 +20,7 @@ public class Router : MonoBehaviour, IResourceEventHandler {
 		
 	}
 		
-	public void Receive() {
-		ExecuteEvents.Execute<IResourceEventHandler>(current, null, (x,y)=>x.Receive());
+	public void ReceiveSteam() {
+		ExecuteEvents.Execute<ISteamHandler>(current, null, (x,y)=>x.ReceiveSteam());
 	}
 }
