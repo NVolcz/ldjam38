@@ -8,9 +8,9 @@ using System.Linq;
 public class KeyboardController : MonoBehaviour
 {
 	public List<UnityEvent> controllables = new List<UnityEvent> ();
-	public List<KeyCode> keys = new List<KeyCode> {
-		KeyCode.A, KeyCode.B, KeyCode.C, KeyCode.D, KeyCode.E, KeyCode.F, KeyCode.G, KeyCode.H, KeyCode.I, KeyCode.J, KeyCode.K, KeyCode.L, KeyCode.M, KeyCode.N, KeyCode.O, KeyCode.P, KeyCode.Q, KeyCode.R, KeyCode.S, KeyCode.T, KeyCode.U, KeyCode.V, KeyCode.W, KeyCode.X, KeyCode.Y, KeyCode.Z
-	};
+//	public List<KeyCode> keys = new List<KeyCode> {
+//		KeyCode.A, KeyCode.B, KeyCode.C, KeyCode.D, KeyCode.E, KeyCode.F, KeyCode.G, KeyCode.H, KeyCode.I, KeyCode.J, KeyCode.K, KeyCode.L, KeyCode.M, KeyCode.N, KeyCode.O, KeyCode.P, KeyCode.Q, KeyCode.R, KeyCode.S, KeyCode.T, KeyCode.U, KeyCode.V, KeyCode.W, KeyCode.X, KeyCode.Y, KeyCode.Z
+//	};
 
 	void Start ()
 	{
@@ -20,18 +20,19 @@ public class KeyboardController : MonoBehaviour
 			keys = keys.OrderBy (r => rnd.Next ()).ToList ();
 		}
 		*/
-		Debug.Log (keys.ElementAt (0));
+		//Debug.Log (keys.ElementAt (0));
 	}
 
 	// Update is called once per frame
 	void Update ()
 	{
-		if (Input.anyKeyDown) {
-			for (int i = 0; i < controllables.Count; i++) {
-				if (Input.GetKeyDown (keys [i])) {
-					controllables [i].Invoke ();
-				}
-			}
+//		for (int i = 0; i < controllables.Count; i++) {
+//			if (Input.GetKeyDown (keys [i])) {
+//				controllables [i].Invoke ();
+//			}
+//		}
+		if (Input.GetKeyUp (KeyCode.A)) {
+			controllables [0].Invoke ();
 		}
 	}
 }

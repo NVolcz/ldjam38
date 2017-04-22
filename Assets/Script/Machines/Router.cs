@@ -26,6 +26,10 @@ public class Router : MonoBehaviour, ISteamHandler {
 
 	public void CycleTarget()
 	{
-		current++;	
+		current++;
+		if (current == steamTarget.Count) {
+			current = 0;
+		}
+		Debug.Log ("CycleTarget called, current = " + current + " (" + steamTarget[current] + ")");
 	}
 }
