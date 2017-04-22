@@ -12,9 +12,8 @@ public class Router : MonoBehaviour, ISteamHandler
 	// Use this for initialization
 	void Start ()
 	{
-		// TODO: Make this player controllable
-
 		current = 0;
+		Debug.Log ("Router is set to " + steamTarget[current]);
 	}
 	
 	// Update is called once per frame
@@ -25,6 +24,7 @@ public class Router : MonoBehaviour, ISteamHandler
 
 	public void ReceiveSteam ()
 	{
+		Debug.Log ("Router is sending steam to " + steamTarget [current]);
 		ExecuteEvents.Execute<ISteamHandler> (steamTarget [current], null, (x, y) => x.ReceiveSteam ());
 	}
 

@@ -22,6 +22,6 @@ public class PorridgeCooker : MonoBehaviour, ISteamHandler
 	public void ReceiveSteam()
 	{
 		pressure++;
-		Debug.Log ("Mmm! porridge!");
+		Debug.Log ("Porridge cooker is receiving steam");
 	}
 }

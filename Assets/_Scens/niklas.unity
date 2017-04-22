@@ -577,12 +577,12 @@ Prefab:
         type: 2}
       propertyPath: steamTarget.Array.data[0]
       value: 
-      objectReference: {fileID: 2002113170}
+      objectReference: {fileID: 1056226326}
     - target: {fileID: 114009631614728188, guid: 5c7eb7ffb84bb43ffbc37c7d38d011df,
         type: 2}
       propertyPath: steamTarget.Array.data[1]
       value: 
-      objectReference: {fileID: 1056226326}
+      objectReference: {fileID: 2002113170}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5c7eb7ffb84bb43ffbc37c7d38d011df, type: 2}
   m_IsPrefabParent: 0
@@ -751,18 +751,6 @@ GameObject:
   m_PrefabParentObject: {fileID: 1477707668420120, guid: 7263ec70f5b86413f8c78985612e0d57,
     type: 2}
   m_PrefabInternal: {fileID: 1056226325}
---- !u!114 &1056226327
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1056226326}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f5318a947b4e48fc912ff07a0870491, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pressure: 0
 --- !u!1001 &1508799763
 Prefab:
   m_ObjectHideFlags: 0
@@ -807,6 +795,31 @@ Prefab:
       propertyPath: steamTarget
       value: 
       objectReference: {fileID: 23122411}
+    - target: {fileID: 224651351358095530, guid: b7bb9577ce8824998a6e5c2411a88e4e,
+        type: 2}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224651351358095530, guid: b7bb9577ce8824998a6e5c2411a88e4e,
+        type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224670710259648766, guid: b7bb9577ce8824998a6e5c2411a88e4e,
+        type: 2}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224670710259648766, guid: b7bb9577ce8824998a6e5c2411a88e4e,
+        type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224813235120535910, guid: b7bb9577ce8824998a6e5c2411a88e4e,
+        type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b7bb9577ce8824998a6e5c2411a88e4e, type: 2}
   m_IsPrefabParent: 0

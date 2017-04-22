@@ -21,6 +21,7 @@ public class CoalThreadmill : MonoBehaviour, ISteamHandler
 
 	public void ReceiveSteam ()
 	{
+		Debug.Log ("CoalThreadmill is receiving steam");
 		ExecuteEvents.Execute<ISteamHandler> (coalTarget, null, (x, y) => x.ReceiveSteam ());
 	}
 }
