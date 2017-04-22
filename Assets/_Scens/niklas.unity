@@ -96,6 +96,12 @@ GameObject:
   m_PrefabParentObject: {fileID: 1170900319250982, guid: 5c7eb7ffb84bb43ffbc37c7d38d011df,
     type: 2}
   m_PrefabInternal: {fileID: 463653456}
+--- !u!114 &23122412 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114009631614728188, guid: 5c7eb7ffb84bb43ffbc37c7d38d011df,
+    type: 2}
+  m_PrefabInternal: {fileID: 463653456}
+  m_Script: {fileID: 11500000, guid: c3636c6bbd6a84c5c887d3771f15c1e0, type: 3}
 --- !u!1 &111696837
 GameObject:
   m_ObjectHideFlags: 0
@@ -345,6 +351,62 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 10fa713b4118140338a9d7467a1681f2, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1006689882
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1006689884}
+  - component: {fileID: 1006689883}
+  m_Layer: 0
+  m_Name: KeyboardController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1006689883
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1006689882}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10ff21262e4424c4dbea20c8f1353bfb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  controllables:
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 23122412}
+        m_MethodName: CycleTarget
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+--- !u!4 &1006689884
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1006689882}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.73474693, y: 4.8417587, z: -12.560009}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1056226325
 Prefab:
   m_ObjectHideFlags: 0
@@ -392,6 +454,18 @@ GameObject:
   m_PrefabParentObject: {fileID: 1477707668420120, guid: 7263ec70f5b86413f8c78985612e0d57,
     type: 2}
   m_PrefabInternal: {fileID: 1056226325}
+--- !u!114 &1056226327
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1056226326}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f5318a947b4e48fc912ff07a0870491, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pressure: 0
 --- !u!1001 &1508799763
 Prefab:
   m_ObjectHideFlags: 0
