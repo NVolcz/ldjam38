@@ -6,6 +6,7 @@ using UnityEngine.EventSystems;
 public class IndustrialFan : MonoBehaviour, ISteamHandler {
 
 	public GameObject windTarget;
+	private float lastActiveTime = 0.0f;
 
 	// Use this for initialization
 	void Start () {
@@ -14,11 +15,13 @@ public class IndustrialFan : MonoBehaviour, ISteamHandler {
 	
 	// Update is called once per frame
 	void Update () {
-		
+		if (lastActiveTime >= Time.fixedTime) { // if has received steam in the last 10 seconds
+			//ExecuteEvents.Execute<IWindHandler>(windTarget, null, (x,y)=>x.ReceiveWind());
+		}
 	}
 
 	public void ReceiveSteam() {
-		Debug.Log ("Industrial fan is sending wind to " + windTarget);
-		ExecuteEvents.Execute<IWindHandler>(windTarget, null, (x,y)=>x.ReceiveWind());
+		Debug.Log ("Industrial fan is receiving wind");
+		lastActiveTime = Time.fixedTime + 10f;
 	}
 }
