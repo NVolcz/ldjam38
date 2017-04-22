@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 
 
-public class SteamBoiler : MonoBehaviour, IResourceEventHandler
+public class SteamBoiler : MonoBehaviour, ICoalHandler
 {
 	private float nextActionTime = 0.0f;
 	public float period = 0.1f;
@@ -17,12 +17,12 @@ public class SteamBoiler : MonoBehaviour, IResourceEventHandler
 	void Update () {
 		if (Time.time > nextActionTime ) {
 			nextActionTime += period;
-			ExecuteEvents.Execute<IResourceEventHandler>(steamTarget, null, (x,y)=>x.Receive());
+			ExecuteEvents.Execute<ISteamHandler>(steamTarget, null, (x,y)=>x.ReceiveSteam());
 			Debug.Log ("STEAM!! YEAAH!");
 		}
 	}
 
-	public void Receive() {
+	public void ReceiveCoal() {
 		Debug.Log ("Coal RECEIVED!! YEAAH!");
 	}
 }

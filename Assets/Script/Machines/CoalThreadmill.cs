@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 
 
-public class CoalThreadmill : MonoBehaviour, IResourceEventHandler
+public class CoalThreadmill : MonoBehaviour, ISteamHandler
 {
 	public GameObject coalTarget;
 
@@ -19,9 +19,9 @@ public class CoalThreadmill : MonoBehaviour, IResourceEventHandler
 
 	}
 
-	public void Receive ()
+	public void ReceiveSteam ()
 	{
-		ExecuteEvents.Execute<IResourceEventHandler> (coalTarget, null, (x, y) => x.Receive ());
+		ExecuteEvents.Execute<ISteamHandler> (coalTarget, null, (x, y) => x.ReceiveSteam ());
 	}
 }
 
