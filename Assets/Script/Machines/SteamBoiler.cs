@@ -8,6 +8,8 @@ public class SteamBoiler : MonoBehaviour, ICoalHandler, IWaterHandler
 	private float nextActionTime = 0.0f;
 	public float period = 0.1f;
 	public GameObject steamTarget;
+	[Range(0,100)]
+	public int pressure = 0;
 
 	// Use this for initialization
 	void Start () {
