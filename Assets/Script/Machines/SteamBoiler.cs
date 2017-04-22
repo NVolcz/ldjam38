@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 
 
-public class SteamBoiler : MonoBehaviour, ICoalHandler, IWaterHandler
+public class SteamBoiler : MonoBehaviour, ICoalHandler, IWaterHandler, IWindHandler
 {
 	private float nextActionTime = 0.0f;
 	public float period = 0.1f;
@@ -30,6 +30,10 @@ public class SteamBoiler : MonoBehaviour, ICoalHandler, IWaterHandler
 
 	public void ReceiveWater() {
 		Debug.Log ("Water received in SteamBoiler, wooo!");
+	}
+
+	public void ReceiveWind() {
+		Debug.Log ("Wind received by SteamBoiler!");
 	}
 }
 
