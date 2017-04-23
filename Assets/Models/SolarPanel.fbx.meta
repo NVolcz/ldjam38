@@ -1,16 +1,25 @@
 fileFormatVersion: 2
-guid: 71437223ce4144f4d82b55093fc4dad2
-timeCreated: 1492861747
+guid: eb8eecc6426ecf64fb9294a349446c18
+timeCreated: 1492861452
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
     100000: //RootNode
+    100002: Body
+    100004: Panels
     400000: //RootNode
+    400002: Body
+    400004: Panels
     2300000: //RootNode
+    2300002: Body
+    2300004: Panels
     3300000: //RootNode
-    4300000: Panel.001
-    4300002: Panel
+    3300002: Body
+    3300004: Panels
+    4300000: Panel
+    4300002: Panels
+    4300004: Body
   materials:
     importMaterials: 1
     materialName: 0
