@@ -393,7 +393,7 @@ GameObject:
   - component: {fileID: 356498610}
   - component: {fileID: 356498609}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: StartGametimer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
