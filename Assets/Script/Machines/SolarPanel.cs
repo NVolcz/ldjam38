@@ -17,11 +17,11 @@ public class SolarPanel : MonoBehaviour
 		//this.transform.eulerAngles = new Vector3(0.0f, 360.0f, 0.0f);
 		//sun.transform.eulerAngles = new Vector3(0.0f, 0.0f, 0.0f);
 
-		Debug.Log ("Sun: " + sunRotation + ". Panel: " + panelRotation);
+		//Debug.Log ("Sun: " + sunRotation + ". Panel: " + panelRotation);
 
 		// This line is the absolute of the absolute of ....
 		efficiency = CalculateEfficiency(sunRotation, panelRotation);
-		Debug.Log ("Solar Panel efficiency: " + efficiency);
+		//Debug.Log ("Solar Panel efficiency: " + efficiency);
 	}
 
 	// Borrowed from: https://stackoverflow.com/questions/7570808/how-do-i-calculate-the-difference-of-two-angle-measures
