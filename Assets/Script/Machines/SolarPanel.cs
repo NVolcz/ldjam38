@@ -6,11 +6,11 @@ using UnityEngine.Events;
 using UnityEngine.EventSystems;
 
 
-public class SolarPanel : MonoBehaviour
+public class SolarPanel : MonoBehaviour, ISteamHandler
 {
 	public float nextActionTime = 0.1f;
 
-	private float period;
+	private float period = 0.1f;
 
 	public GameObject electricityTarget;
 
@@ -42,11 +42,11 @@ public class SolarPanel : MonoBehaviour
 		 */
 		if (Time.time > nextActionTime ) {
 			nextActionTime += period;
-			ExecuteEvents.Execute<IElectricityHandler>(electricityTarget, null, (x,y)=>x.ReceiveElectricity());
+			ExecuteEvents.Execute<IElectricityHandler>(electricityTarget, null, (x,y)=>x.ReceiveElectricity(efficiency));
 		}
 	}
 
-	public void OnSteamUsage()
+	public void ReceiveSteam()
 	{
 		this.transform.Rotate (0, 0.5f, 0);
 	}

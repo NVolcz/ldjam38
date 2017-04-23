@@ -3,9 +3,8 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 
 
-public class CoalThreadmill : MonoBehaviour, ISteamHandler
+public class CoalThreadmill : MonoBehaviour, IElectricityHandler
 {
-	public GameObject coalTarget;
 
 	// Use this for initialization
 	void Start ()
@@ -20,10 +19,10 @@ public class CoalThreadmill : MonoBehaviour, ISteamHandler
 
 	}
 
-	public void ReceiveSteam ()
+	public void ReceiveElectricity (double amount)
 	{
 		Debug.Log ("CoalThreadmill is receiving steam");
-		ExecuteEvents.Execute<ISteamHandler> (coalTarget, null, (x, y) => x.ReceiveSteam ());
+		gameObject.BroadcastMessage("UpdateThreadmillSpeed", amount);
 	}
 }
 

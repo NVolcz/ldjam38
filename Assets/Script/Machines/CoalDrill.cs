@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
 
-public class CoalDrill : MonoBehaviour, IElectricityHandler
+public class CoalDrill : MonoBehaviour
 {
 	public float nextActionTime = 0.1f;
 
