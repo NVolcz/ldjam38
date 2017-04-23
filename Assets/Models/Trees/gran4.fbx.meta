@@ -1,28 +1,16 @@
 fileFormatVersion: 2
-guid: 97cd3bebb1952124b9b6e6e882a822f4
-timeCreated: 1492889092
+guid: 2830efacad5c45e469d0ac6e66af5348
+timeCreated: 1492946609
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
     100000: //RootNode
-    100002: House
-    100004: Pipes
     400000: //RootNode
-    400002: House
-    400004: Pipes
     2300000: //RootNode
-    2300002: House
-    2300004: Pipes
     3300000: //RootNode
-    3300002: House
-    3300004: Pipes
-    4300000: Cylinder_001
-    4300002: Pipes
-    4300004: House
+    4300000: Cone_014
     7400000: Default Take
-    7400002: Pipes|Cylinder_001|Default Take|Layer0
-    7400004: House|Cylinder_001|Default Take|Layer0
     9500000: //RootNode
   materials:
     importMaterials: 1

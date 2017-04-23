@@ -1,7 +1,8 @@
 ﻿using System;
+using UnityEngine.EventSystems;
 
 
-public interface IElectricityHandler
+public interface IElectricityHandler : IEventSystemHandler
 {
 	void ReceiveElectricity();
 }

@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 71437223ce4144f4d82b55093fc4dad2
-timeCreated: 1492861747
+guid: 94818ff06f070a641895df09b37314ea
+timeCreated: 1492946609
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
@@ -9,8 +9,9 @@ ModelImporter:
     400000: //RootNode
     2300000: //RootNode
     3300000: //RootNode
-    4300000: Panel.001
-    4300002: Panel
+    4300000: Cone_010
+    7400000: Default Take
+    9500000: //RootNode
   materials:
     importMaterials: 1
     materialName: 0
@@ -73,7 +74,7 @@ ModelImporter:
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 0
+  animationType: 2
   humanoidOversampling: 1
   additionalBone: 0
   userData: 

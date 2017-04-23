@@ -4,7 +4,7 @@ using UnityEngine.EventSystems;
 
 public interface ICoalHandler : IEventSystemHandler
 {
-	void ReceiveCoal();
+	void ReceiveCoal(int amount);
 }
 
 
