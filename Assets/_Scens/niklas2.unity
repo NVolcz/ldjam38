@@ -572,6 +572,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114009631614728188, guid: 5c7eb7ffb84bb43ffbc37c7d38d011df,
+        type: 2}
+      propertyPath: steamTarget.Array.size
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4444966735294276, guid: 5c7eb7ffb84bb43ffbc37c7d38d011df, type: 2}
       propertyPath: m_LocalPosition.x
       value: -3.98
@@ -614,6 +619,11 @@ Prefab:
       propertyPath: steamTarget.Array.data[1]
       value: 
       objectReference: {fileID: 2002113170}
+    - target: {fileID: 114009631614728188, guid: 5c7eb7ffb84bb43ffbc37c7d38d011df,
+        type: 2}
+      propertyPath: steamTarget.Array.data[2]
+      value: 
+      objectReference: {fileID: 1390679148}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5c7eb7ffb84bb43ffbc37c7d38d011df, type: 2}
   m_IsPrefabParent: 0
@@ -943,8 +953,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3dd01ebccb69443158b7deb4b5c3ad7b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  steamThreshold: 2
   sun: {fileID: 1713216829}
   efficiency: 0
+  steamLevel: 0
 --- !u!1001 &1508799763
 Prefab:
   m_ObjectHideFlags: 0
@@ -1012,6 +1024,11 @@ Prefab:
     - target: {fileID: 224813235120535910, guid: b7bb9577ce8824998a6e5c2411a88e4e,
         type: 2}
       propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114347253476960918, guid: b7bb9577ce8824998a6e5c2411a88e4e,
+        type: 2}
+      propertyPath: period
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
