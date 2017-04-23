@@ -735,7 +735,8 @@ Prefab:
       propertyPath: coalTarget
       value: 
       objectReference: {fileID: 1712110850}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114323264737736112, guid: 10fa713b4118140338a9d7467a1681f2, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 10fa713b4118140338a9d7467a1681f2, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &1006689882
@@ -953,10 +954,47 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3dd01ebccb69443158b7deb4b5c3ad7b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  steamThreshold: 2
+  nextActionTime: 0.1
+  electricityTarget: {fileID: 0}
   sun: {fileID: 1713216829}
   efficiency: 0
   steamLevel: 0
+--- !u!114 &1390679150
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1390679148}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba3a375eb98664bbf848b86ad655d6c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nextActionTime: 0.1
+  onMaxLevel:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  maxLevel: 20
+  level: 0
+  usage: 0.1
+  onUsage:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1390679149}
+        m_MethodName: OnSteamUsage
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
 --- !u!1001 &1508799763
 Prefab:
   m_ObjectHideFlags: 0
