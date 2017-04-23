@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 using UnityEngine.EventSystems;
-
+using System.Collections;
 
 public class SteamBoiler : MonoBehaviour, ICoalHandler, IWaterHandler, IWindHandler
 {
@@ -113,6 +113,12 @@ public class SteamBoiler : MonoBehaviour, ICoalHandler, IWaterHandler, IWindHand
 	}
 
 	private void destroySteamBoiler() {
+		StartCoroutine (WaitAndEndGame ());	
+	}
 
+	IEnumerator WaitAndEndGame()
+	{
+		yield return new WaitForSeconds(2);
+		Application.LoadLevel("GameOver");
 	}
 }
