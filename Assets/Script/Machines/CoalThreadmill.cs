@@ -21,7 +21,7 @@ public class CoalThreadmill : MonoBehaviour, IElectricityHandler
 
 	public void ReceiveElectricity (double amount)
 	{
-		Debug.Log ("CoalThreadmill is receiving steam");
+		//Debug.Log ("CoalThreadmill is receiving steam " + amount);
 		gameObject.BroadcastMessage("UpdateThreadmillSpeed", amount);
 	}
 }

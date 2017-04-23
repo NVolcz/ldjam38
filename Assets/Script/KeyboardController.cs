@@ -39,9 +39,6 @@ public class KeyboardController : MonoBehaviour
 		if (Input.GetKeyUp (KeyCode.B)) {
 			controllables [1].Invoke (); // toggle water tower valve
 		}
-		if (Input.GetKeyUp (KeyCode.C)) {
-			controllables [2].Invoke (); // input coal into steam boiler
-		}
 		if (Input.GetKeyUp (KeyCode.Escape)) {
 			Application.Quit();
 		}
