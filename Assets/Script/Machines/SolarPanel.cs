@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 using UnityEngine.Assertions;
-using UnityEngine.PlaymodeTests;
+//using UnityEngine.PlaymodeTests;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
 
@@ -65,14 +65,5 @@ public class SolarPanel : MonoBehaviour
 	}
 
 	// How do I run this?!
-	[Test]
-	public void testEfficiency ()
-	{
-		// If the sun and panel are pointing in the same direction then 0 efficiency
-		Assert.AreEqual (CalculateEfficiency (360.0f, 360.0f), 0.0f);
-		Assert.AreEqual (CalculateEfficiency (360.0f, 0.0f), 0.0f);
 
-		// If the sun and panel are pointing at each other then maximal efficiency
-		Assert.AreEqual (CalculateEfficiency (180.0f, 360.0f), 1.0f);
-	}
 }

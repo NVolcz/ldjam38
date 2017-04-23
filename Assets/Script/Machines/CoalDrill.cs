@@ -26,7 +26,7 @@ public class CoalDrill : MonoBehaviour, IElectricityHandler
 	{		
 		if (Time.time > nextActionTime ) {
 			nextActionTime += period;
-			ExecuteEvents.Execute<ICoalHandler>(electricityTarget, null, (x,y)=>x.ReceiveCoal());
+			ExecuteEvents.Execute<ICoalHandler>(electricityTarget, null, (x,y)=>x.ReceiveCoal(1));
 		}
 	}
 
