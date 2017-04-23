@@ -31,11 +31,16 @@ public class KeyboardController : MonoBehaviour
 //				controllables [i].Invoke ();
 //			}
 //		}
+
+		//DEBUG
 		if (Input.GetKeyUp (KeyCode.A)) {
-			controllables [0].Invoke ();
+			controllables [0].Invoke (); // reroute router steam
 		}
 		if (Input.GetKeyUp (KeyCode.B)) {
-			controllables [1].Invoke ();
+			controllables [1].Invoke (); // toggle water tower valve
+		}
+		if (Input.GetKeyUp (KeyCode.C)) {
+			controllables [2].Invoke (); // input coal into steam boiler
 		}
 	}
 }
