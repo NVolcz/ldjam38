@@ -4,7 +4,7 @@ using UnityEngine.EventSystems;
 
 public interface IElectricityHandler : IEventSystemHandler
 {
-	void ReceiveElectricity();
+	void ReceiveElectricity(double amount);
 }
 
 

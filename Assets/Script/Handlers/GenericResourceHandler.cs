@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEngine.Events;
 
 
-public class GenericResourceHandler : MonoBehaviour, ISteamHandler, IWaterHandler, IElectricityHandler
+public class GenericResourceHandler : MonoBehaviour, ISteamHandler, IWaterHandler
 {
 	public float nextActionTime = 0.1f;
 	private float period = 0;
@@ -41,10 +41,6 @@ public class GenericResourceHandler : MonoBehaviour, ISteamHandler, IWaterHandle
 		Receive ();
 	}
 
-	public void ReceiveElectricity ()
-	{
-		Receive ();
-	}
 
 	public void ReceiveCoal ()
 	{

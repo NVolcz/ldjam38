@@ -88,8 +88,6 @@ GameObject:
   - component: {fileID: 4047196732389110}
   - component: {fileID: 65803712302209762}
   - component: {fileID: 114323264737736112}
-  - component: {fileID: 114500154816482042}
-  - component: {fileID: 95275188389772492}
   m_Layer: 0
   m_Name: CoalThreadmill
   m_TagString: Untagged
@@ -1287,7 +1285,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 5e31db9c05c0e394bad2824933b55c17, type: 2}
+  - {fileID: 2100000, guid: 85d17f08e2a8e3541b3dc340ce800746, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1717,23 +1715,6 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!95 &95275188389772492
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1109929821721888}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 02cb7c8210508e34d9a08284a6671ab6, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
 --- !u!95 &95277115776874056
 Animator:
   serializedVersion: 3
@@ -1905,18 +1886,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &114323264737736112
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1109929821721888}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 733a494387ab34c6d937959d5ca3422d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  coalTarget: {fileID: 0}
---- !u!114 &114500154816482042
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
