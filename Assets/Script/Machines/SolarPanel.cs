@@ -3,15 +3,16 @@ using UnityEngine;
 using UnityEngine.Assertions;
 using UnityEngine.PlaymodeTests;
 using UnityEngine.Events;
+using UnityEngine.EventSystems;
 
 
-public class SolarPanel : MonoBehaviour, ISteamHandler
+public class SolarPanel : MonoBehaviour
 {
-	public float steamUsage = 0.01f;
+	public float nextActionTime = 0.1f;
 
-	public UnityEvent onMaxSteamLevel;
+	private float period;
 
-	public float maxSteamLevel = 20.0f;
+	public GameObject electricityTarget;
 
 	public GameObject sun;
 	[ReadOnly]
@@ -33,50 +34,46 @@ public class SolarPanel : MonoBehaviour, ISteamHandler
 		//Debug.Log ("Sun: " + sunRotation + ". Panel: " + panelRotation);
 
 		// This line is the absolute of the absolute of ....
-		efficiency = CalculateEfficiency(sunRotation, panelRotation);
+		efficiency = CalculateEfficiency (sunRotation, panelRotation);
 		//Debug.Log ("Solar Panel efficiency: " + efficiency);
 
 		/*
-		 * Steam handling code
+		 * Electricity handling code
 		 */
-		if (steamLevel > steamUsage) {
-			this.transform.Rotate (0, 0.5f, 0);
-			steamLevel = steamLevel - steamUsage < 0 ? 0 : steamLevel - steamUsage;
+		if (Time.time > nextActionTime ) {
+			nextActionTime += period;
+			ExecuteEvents.Execute<IElectricityHandler>(electricityTarget, null, (x,y)=>x.ReceiveElectricity());
 		}
 	}
 
-	// Borrowed from: https://stackoverflow.com/questions/7570808/how-do-i-calculate-the-difference-of-two-angle-measures
-	private double Distance(double a, double b)
+	public void OnSteamUsage()
 	{
-		double phi = Math.Abs(a - b) % 360;
+		this.transform.Rotate (0, 0.5f, 0);
+	}
+
+	// Borrowed from: https://stackoverflow.com/questions/7570808/how-do-i-calculate-the-difference-of-two-angle-measures
+	private double Distance (double a, double b)
+	{
+		double phi = Math.Abs (a - b) % 360;
 		double distance = phi > 180.0f ? 360.0f - phi : phi;
 		return distance;
 	}
 
-	private double CalculateEfficiency(double a, double b)
+	private double CalculateEfficiency (double a, double b)
 	{
 		return Math.Round (Distance (a, b) / 180.0f, 1);
 	}
 
 	// How do I run this?!
 	[Test]
-	public void testEfficiency() {
+	public void testEfficiency ()
+	{
 		// If the sun and panel are pointing in the same direction then 0 efficiency
-		Assert.AreEqual(CalculateEfficiency(360.0f, 360.0f), 0.0f);
-		Assert.AreEqual(CalculateEfficiency(360.0f, 0.0f), 0.0f);
+		Assert.AreEqual (CalculateEfficiency (360.0f, 360.0f), 0.0f);
+		Assert.AreEqual (CalculateEfficiency (360.0f, 0.0f), 0.0f);
 
 		// If the sun and panel are pointing at each other then maximal efficiency
-		Assert.AreEqual(CalculateEfficiency(180.0f, 360.0f), 1.0f);
-	}
-
-	public void ReceiveSteam()
-	{
-		if (steamLevel < maxSteamLevel) {
-			steamLevel += 10.0f;
-		} else {
-			onMaxSteamLevel.Invoke ();
-		}
-
+		Assert.AreEqual (CalculateEfficiency (180.0f, 360.0f), 1.0f);
 	}
 }
 
