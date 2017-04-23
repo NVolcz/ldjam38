@@ -166,9 +166,9 @@ GameObject:
   m_Component:
   - component: {fileID: 224418748328541624}
   - component: {fileID: 114673805824234946}
-  - component: {fileID: 114650277205340050}
+  - component: {fileID: 114182521417294506}
   m_Layer: 5
-  m_Name: Slider steam
+  m_Name: Slider Efficiency
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -215,7 +215,7 @@ GameObject:
   m_Component:
   - component: {fileID: 224326641681281866}
   - component: {fileID: 114246747294239368}
-  - component: {fileID: 114450141538704714}
+  - component: {fileID: 114925934155871350}
   m_Layer: 5
   m_Name: Slider Steam
   m_TagString: Untagged
@@ -263,7 +263,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1571289665806720}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.35, y: 0.45, z: -7.57}
+  m_LocalPosition: {x: 1.02, y: 0.45, z: -6.24}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children:
   - {fileID: 4351634771624672}
@@ -472,6 +472,18 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114182521417294506
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1542436457888126}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 635e54f7c01696e4c99c14f83576ba18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 1960714147078512}
 --- !u!114 &114236840703944762
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -541,17 +553,6 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.Slider+SliderEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
---- !u!114 &114450141538704714
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1802498707337904}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7de43bfe72ee2498287a8a1d8600706f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114459773291114026
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -568,6 +569,7 @@ MonoBehaviour:
   sun: {fileID: 0}
   efficiency: 0
   steamLevel: 0
+  rotationSpeed: 5
 --- !u!114 &114609048305149170
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -595,17 +597,6 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
---- !u!114 &114650277205340050
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1542436457888126}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ff479f4a2924c4d558ca936f3bc2b404, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114673805824234946
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -646,7 +637,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 0}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 100
+  m_MaxValue: 1
   m_WholeNumbers: 0
   m_Value: 0
   m_OnValueChanged:
@@ -697,6 +688,17 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &114925934155871350
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1802498707337904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3982887fc38dc4c6f8c39dc535508dbf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!222 &222235606191158134
 CanvasRenderer:
   m_ObjectHideFlags: 1
