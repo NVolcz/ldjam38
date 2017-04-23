@@ -1,77 +1,15 @@
 fileFormatVersion: 2
-guid: 369adda0f3a6acf448ecd491061109f0
-timeCreated: 1492940647
+guid: 0a6b1974d5ee4564c98bfcebb2a401ed
+timeCreated: 1492947686
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
-    100000: Cube
-    100002: Cube.001
-    100004: Cube.002
-    100006: Cube.003
-    100008: Cube.004
-    100010: Cube.005
-    100012: Cube.006
-    100014: Cube.007
-    100016: Cube.008
-    100018: Cube.009
-    100020: Cube.010
-    100022: //RootNode
-    100024: House
-    100026: Windows
-    400000: Cube
-    400002: Cube.001
-    400004: Cube.002
-    400006: Cube.003
-    400008: Cube.004
-    400010: Cube.005
-    400012: Cube.006
-    400014: Cube.007
-    400016: Cube.008
-    400018: Cube.009
-    400020: Cube.010
-    400022: //RootNode
-    400024: House
-    400026: Windows
-    2300000: Cube
-    2300002: Cube.001
-    2300004: Cube.002
-    2300006: Cube.003
-    2300008: Cube.004
-    2300010: Cube.005
-    2300012: Cube.006
-    2300014: Cube.007
-    2300016: Cube.008
-    2300018: Cube.009
-    2300020: Cube.010
-    2300022: House
-    2300024: Windows
-    3300000: Cube
-    3300002: Cube.001
-    3300004: Cube.002
-    3300006: Cube.003
-    3300008: Cube.004
-    3300010: Cube.005
-    3300012: Cube.006
-    3300014: Cube.007
-    3300016: Cube.008
-    3300018: Cube.009
-    3300020: Cube.010
-    3300022: House
-    3300024: Windows
-    4300000: Cube.010
-    4300002: Cube.009
-    4300004: Cube.008
-    4300006: Cube.007
-    4300008: Cube.006
-    4300010: Cube.004
-    4300012: Cube.005
-    4300014: Cube.003
-    4300016: Cube.002
-    4300018: Cube.001
-    4300020: Cube
-    4300022: Windows
-    4300024: House
+    100000: //RootNode
+    400000: //RootNode
+    2300000: //RootNode
+    3300000: //RootNode
+    4300000: Cube
   materials:
     importMaterials: 1
     materialName: 0
@@ -82,8 +20,6 @@ ModelImporter:
     resampleCurves: 1
     optimizeGameObjects: 0
     motionNodeName: 
-    rigImportErrors: 
-    rigImportWarnings: 
     animationImportErrors: 
     animationImportWarnings: 
     animationRetargetingWarnings: 
@@ -117,7 +53,7 @@ ModelImporter:
     normalSmoothAngle: 60
     normalImportMode: 0
     tangentImportMode: 3
-  importAnimation: 0
+  importAnimation: 1
   copyAvatar: 0
   humanDescription:
     serializedVersion: 2
@@ -133,7 +69,7 @@ ModelImporter:
     rootMotionBoneName: 
     rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
     hasTranslationDoF: 0
-    hasExtraRoot: 1
+    hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   animationType: 0
