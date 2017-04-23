@@ -10,7 +10,7 @@ public class CoalMover : MonoBehaviour {
 	private Transform coalPiece;
 	private float fraction = 0f;
 
-	public float speed = 0.5f;
+	public float speed = 0.1f;
 	public GameObject coalTarget;
 
 	void Start () {
@@ -28,5 +28,9 @@ public class CoalMover : MonoBehaviour {
 			ExecuteEvents.Execute<ICoalHandler> (coalTarget, null, (x, y) => x.ReceiveCoal (1));
 			fraction = 0f;
 		}
+	}
+
+	public void UpdateThreadmillSpeed(double amount) {
+		speed = (float)amount;
 	}
 }
