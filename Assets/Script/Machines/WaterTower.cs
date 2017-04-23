@@ -11,10 +11,14 @@ public class WaterTower : MonoBehaviour
 
 	private float nextActionTime = 0.0f;
 
+	private AudioSource sfx;
+	private float nextSfxTime = 0f;
+	private const float sfxPeriod = 5f;
+
 	// Use this for initialization
 	void Start ()
 	{
-	
+		sfx = gameObject.GetComponent<AudioSource> ();
 	}
 	
 	// Update is called once per frame
@@ -25,6 +29,11 @@ public class WaterTower : MonoBehaviour
 				nextActionTime += period;
 				ExecuteEvents.Execute<IWaterHandler>(waterTarget, null, (x,y)=>x.ReceiveWater());
 				Debug.Log ("Water tower sending water to boiler");
+
+				if (Time.time > nextSfxTime) {
+					nextSfxTime += sfxPeriod;
+					sfx.Play ();
+				}
 			}
 		}
 	}

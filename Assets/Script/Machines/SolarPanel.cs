@@ -76,5 +76,3 @@ public class SolarPanel : MonoBehaviour
 		Assert.AreEqual (CalculateEfficiency (180.0f, 360.0f), 1.0f);
 	}
 }
-
-
