@@ -54,7 +54,12 @@ public class SteamBoiler : MonoBehaviour, ICoalHandler, IWaterHandler, IWindHand
 	}
 
 	void convertTempAndWaterToSteamPressure() {
-		int pressureChange = ((float)temperature / (float)maxTemperature) * maxPressureIncrease;
+		Debug.Log ("Pressure change: " + (float)temperature + " / " + (float)maxTemperature + " * " + maxPressureIncrease);
+		int pressureChange = (int)(((float)temperature / (float)maxTemperature) * maxPressureIncrease);
+		Debug.Log ("Pressure Change = " + pressureChange);
+		if (pressureChange > waterLevel) {
+			pressureChange = waterLevel;
+		}
 		pressure += pressureChange;
 
 		waterLevel -= pressureChange;
