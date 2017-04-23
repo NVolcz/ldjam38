@@ -16,6 +16,7 @@ public class CoalThreadmill : MonoBehaviour, ISteamHandler
 	// Update is called once per frame
 	void Update ()
 	{
+		//TODO send coal to steam boiler
 
 	}
 

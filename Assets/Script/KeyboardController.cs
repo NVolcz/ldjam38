@@ -26,10 +26,21 @@ public class KeyboardController : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
 	{
-		for (int i = 0; i < controllables.Count; i++) {
-			if (Input.GetKeyDown (keys [i])) {
-				controllables [i].Invoke ();
-			}
+		//for (int i = 0; i < controllables.Count; i++) {
+		//	if (Input.GetKeyDown (keys [i])) {
+		//		controllables [i].Invoke ();
+		//	}
+		//}
+
+		//DEBUG
+		if (Input.GetKeyUp (KeyCode.A)) {
+			controllables [0].Invoke (); // reroute router steam
+		}
+		if (Input.GetKeyUp (KeyCode.B)) {
+			controllables [1].Invoke (); // toggle water tower valve
+		}
+		if (Input.GetKeyUp (KeyCode.C)) {
+			controllables [2].Invoke (); // input coal into steam boiler
 		}
 	}
 }
