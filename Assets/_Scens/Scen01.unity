@@ -177,6 +177,21 @@ Prefab:
       propertyPath: steamTarget
       value: 
       objectReference: {fileID: 2085081072}
+    - target: {fileID: 114347253476960918, guid: b7bb9577ce8824998a6e5c2411a88e4e,
+        type: 2}
+      propertyPath: pressure
+      value: 41
+      objectReference: {fileID: 0}
+    - target: {fileID: 114347253476960918, guid: b7bb9577ce8824998a6e5c2411a88e4e,
+        type: 2}
+      propertyPath: temperature
+      value: 21
+      objectReference: {fileID: 0}
+    - target: {fileID: 114347253476960918, guid: b7bb9577ce8824998a6e5c2411a88e4e,
+        type: 2}
+      propertyPath: waterLevel
+      value: 20
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b7bb9577ce8824998a6e5c2411a88e4e, type: 2}
   m_IsPrefabParent: 0
