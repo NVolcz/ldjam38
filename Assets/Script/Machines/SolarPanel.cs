@@ -20,6 +20,8 @@ public class SolarPanel : MonoBehaviour, ISteamHandler
 	[ReadOnly]
 	public float steamLevel = 0;
 
+	public float rotationSpeed = 5f;
+
 	void Update ()
 	{
 		/*
@@ -48,7 +50,8 @@ public class SolarPanel : MonoBehaviour, ISteamHandler
 
 	public void ReceiveSteam()
 	{
-		this.transform.Rotate (0, 0.5f, 0);
+		Debug.Log ("Solar panel got steam");
+		this.transform.Rotate (0, rotationSpeed, 0);
 	}
 
 	// Borrowed from: https://stackoverflow.com/questions/7570808/how-do-i-calculate-the-difference-of-two-angle-measures
